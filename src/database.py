@@ -1,6 +1,6 @@
 import csv
 from src.reminder import PoliteReminder
-
+from src.deadlined_reminders import DateReminder
 
 def list_reminders():
     f = open("reminders.csv", "r")
