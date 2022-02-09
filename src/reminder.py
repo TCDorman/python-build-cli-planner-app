@@ -12,6 +12,9 @@ class PoliteReminder(PrefixedReminder):
     the parent class by calling super().__init__() with a polite prefix 
     (the prefix should contain the word "please").
     """
-    def __init__(self, text):
+    def __init__(self, text, date=None):
         super().__init__(prefix="please remember to ")
         self.text = self.prefix + text
+
+    def __iter__(self):
+        return iter([self.text])
